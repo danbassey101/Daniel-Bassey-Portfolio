@@ -8,17 +8,21 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-brand-50: rgba(245, 158, 11, 0.05);
-  --color-brand-100: rgba(245, 158, 11, 0.1);
-  --color-brand-200: rgba(245, 158, 11, 0.2);
-  --color-brand-300: #fde68a;
-  --color-brand-400: #fcd34d;
-  --color-brand-500: #f59e0b;
-  --color-brand-600: #d97706;
-  --color-brand-700: #b45309;
-  --color-brand-800: #92400e;
-  --color-brand-900: #78350f;
-  --color-brand-950: #451a03;
+  /* Accent (10%) - Tech Violet */
+  --color-brand-50: rgba(112, 111, 211, 0.05);
+  --color-brand-100: rgba(112, 111, 211, 0.1);
+  --color-brand-200: rgba(112, 111, 211, 0.2);
+  --color-brand-300: #9E9DF2;
+  --color-brand-400: #8886EC;
+  --color-brand-500: #706FD3; /* Tech Violet */
+  --color-brand-600: #5D5CBF;
+  --color-brand-700: #4B4AA4;
+  --color-brand-800: #393888;
+  --color-brand-900: #29286C;
+  --color-brand-950: #1B1A50;
+
+  /* Tech Violet primary */
+  --color-violet-tech: #706FD3;
 }
 
 html {
@@ -27,23 +31,23 @@ html {
 }
 
 body {
-  background-color: #0A0A0B;
-  color: #a1a1aa;
+  background-color: #0B0F19; /* Dominant (60%): Midnight Obsidian Dark */
+  color: #CBD5E1; /* Secondary (30%): Crisp Light Text */
   overflow-x: hidden;
 }
 
-/* Scrollbar customized for Elegant Dark theme */
+/* Scrollbar customized for Midnight Obsidian Theme */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0A0B;
+  background: #0B0F19;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1A1A1E;
+  background: #1E293B; /* Obsidian track card background */
   border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(112, 111, 211, 0.1);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #f59e0b;
+  background: #706FD3; /* Tech Violet accent */
 }

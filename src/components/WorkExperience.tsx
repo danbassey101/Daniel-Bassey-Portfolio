@@ -153,10 +153,10 @@ export default function WorkExperience() {
           return (
             <div 
               key={idx}
-              className={`bg-[#141419] rounded-lg border transition-all duration-300 overflow-hidden ${
+              className={`bg-[#131B2A] rounded-lg border transition-all duration-300 overflow-hidden ${
                 isExpanded 
-                  ? 'border-brand-500/25 shadow-lg shadow-black/40 ring-1 ring-brand-500/10' 
-                  : 'border-white/5 hover:border-white/10 hover:bg-white/[0.02] shadow-sm'
+                  ? 'border-brand-500/50 shadow-2xl ring-1 ring-brand-500/20' 
+                  : 'border-white/5 hover:border-white/10 hover:bg-[#1E293B]/40 shadow-sm'
               }`}
             >
               {/* Header Toggle Row */}
@@ -166,27 +166,27 @@ export default function WorkExperience() {
               >
                 <div className="space-y-2">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="p-1.5 bg-brand-500/10 text-brand-500 rounded-md">
+                    <span className="p-1.5 bg-brand-500/10 text-brand-300 rounded-md">
                       <Briefcase className="h-4 w-4" />
                     </span>
                     <h4 className="font-display font-bold text-white text-base md:text-lg tracking-tight select-text">
                       {exp.role}
                     </h4>
-                    <span className="text-white/20 hidden sm:inline select-none">•</span>
-                    <div className="flex items-center gap-1 text-slate-300 font-medium text-xs select-text">
+                    <span className="text-slate-650 hidden sm:inline select-none">•</span>
+                    <div className="flex items-center gap-1 text-slate-350 font-medium text-xs select-text">
                       <Building className="h-3 w-3 text-brand-500" />
                       {exp.company}
                     </div>
                   </div>
 
                   {/* Metadata Row */}
-                  <div className="flex flex-wrap gap-4 text-xs font-medium text-slate-400 font-mono">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="h-3.5 w-3.5 text-slate-550" />
+                  <div className="flex flex-wrap gap-4 text-xs font-medium text-slate-450 font-mono">
+                    <span className="flex items-center gap-1.5 text-slate-400">
+                      <Calendar className="h-3.5 w-3.5 text-slate-500" />
                       {exp.period}
                     </span>
-                    <span className="flex items-center gap-1.5">
-                      <MapPin className="h-3.5 w-3.5 text-slate-550" />
+                    <span className="flex items-center gap-1.5 text-slate-400">
+                      <MapPin className="h-3.5 w-3.5 text-slate-500" />
                       {exp.location}
                     </span>
                   </div>
@@ -195,8 +195,8 @@ export default function WorkExperience() {
                 <div className="flex items-center gap-3 self-end md:self-center">
                   <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded font-mono border ${
                     idx === 0 
-                      ? 'bg-brand-500/10 text-brand-400 border-brand-500/20' 
-                      : 'bg-white/5 text-slate-400 border-white/5'
+                      ? 'bg-brand-500/10 text-brand-300 border-brand-500/20' 
+                      : 'bg-white/5 text-slate-450 border-white/5'
                   }`}>
                     {idx === 0 ? 'Current' : 'Completed'}
                   </span>
@@ -223,13 +223,13 @@ export default function WorkExperience() {
                     <div className="px-5 pb-6 pt-1 md:px-6 md:pb-8 border-t border-white/5 space-y-6">
                       {/* Detailed Bullet Points */}
                       <div className="space-y-3 font-sans">
-                        <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest font-mono">
+                        <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest font-mono">
                           Core Contributions
                         </label>
                         <ul className="space-y-2.5">
                           {exp.bullets.map((bullet, BulletIdx) => (
                             <li key={BulletIdx} className="flex items-start gap-2.5 text-slate-300 text-xs md:text-sm leading-relaxed">
-                              <span className="h-1.5 w-1.5 rounded-full bg-brand-500 mt-2 shrink-0" />
+                              <span className="h-1.5 w-1.5 rounded-full bg-[#706FD3] mt-2 shrink-0" />
                               <span>{bullet}</span>
                             </li>
                           ))}
@@ -239,7 +239,7 @@ export default function WorkExperience() {
                       {/* Experience Impact Indicators */}
                       {exp.metrics && exp.metrics.length > 0 && (
                         <div className="space-y-3">
-                          <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1.5">
+                          <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest font-mono flex items-center gap-1.5">
                             <Sparkles className="h-3.5 w-3.5 text-brand-500" />
                             Key Metrics & Achievements
                           </label>
@@ -247,13 +247,13 @@ export default function WorkExperience() {
                             {exp.metrics.map((metric, MetricIdx) => (
                               <div 
                                 key={MetricIdx}
-                                className="bg-[#0A0A0B]/50 border border-white/5 p-3.5 rounded flex flex-col justify-between"
+                                className="bg-[#0B0F19] border border-white/5 p-3.5 rounded flex flex-col justify-between shadow-inner"
                               >
                                 <div className="flex justify-between items-start">
                                   <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 font-mono truncate max-w-[140px]">
                                     {metric.label}
                                   </span>
-                                  <span className="p-1 bg-[#141419] border border-white/5 rounded text-brand-500">
+                                  <span className="p-1 bg-[#131B2A] border border-white/5 rounded text-brand-300">
                                     <TrendingUp className="h-3 w-3" />
                                   </span>
                                 </div>
@@ -261,7 +261,7 @@ export default function WorkExperience() {
                                   <div className="text-lg font-display font-semibold text-white">
                                     {metric.value}
                                   </div>
-                                  <div className="text-[10px] text-slate-550 leading-tight mt-0.5">
+                                  <div className="text-[10px] text-slate-450 leading-tight mt-0.5">
                                     {metric.description}
                                   </div>
                                 </div>
@@ -294,8 +294,8 @@ export default function WorkExperience() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {CERTIFICATIONS.map((cert) => (
             <div 
-            
-              className="bg-[#141419] rounded-lg border border-white/5 hover:border-brand-500/20 hover:bg-white/[0.015] p-5 transition-all duration-300 flex flex-col justify-between group relative"
+              key={cert.title}
+              className="bg-[#131B2A] rounded-lg border border-white/5 hover:border-brand-500/20 hover:bg-[#1E293B]/75 p-5 transition-all duration-300 flex flex-col justify-between group relative shadow-2xl"
             >
               {/* Outer Glow Overlay */}
               <div className="absolute inset-0 bg-brand-500/[0.01] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-350" />
@@ -303,14 +303,14 @@ export default function WorkExperience() {
               <div className="space-y-3 z-10">
                 <div className="flex justify-between items-start gap-3">
                   <div className="space-y-1">
-                    <span className="text-[10px] font-mono text-brand-500 font-bold uppercase tracking-wider bg-brand-500/5 px-2 py-0.5 rounded border border-brand-500/10">
+                    <span className="text-[10px] font-mono text-brand-300 font-bold uppercase tracking-wider bg-brand-500/5 px-2 py-0.5 rounded border border-brand-500/10">
                       {cert.issuer}
                     </span>
-                    <h4 className="font-display font-bold text-white text-sm md:text-base leading-tight mt-1.5 group-hover:text-brand-400 transition-colors">
+                    <h4 className="font-display font-bold text-white text-sm md:text-base leading-tight mt-1.5 group-hover:text-brand-300 transition-colors">
                       {cert.title}
                     </h4>
                   </div>
-                  <div className="p-1.5 bg-white/5 border border-white/5 rounded-md text-slate-400 group-hover:text-brand-500 group-hover:bg-brand-500/10 group-hover:border-brand-500/20 transition-all duration-300">
+                  <div className="p-1.5 bg-[#0B0F19] border border-white/5 rounded-md text-slate-400 group-hover:text-brand-300 group-hover:bg-brand-500/10 group-hover:border-brand-500/20 transition-all duration-300">
                     <Award className="h-4 w-4" />
                   </div>
                 </div>
@@ -320,7 +320,7 @@ export default function WorkExperience() {
                   {cert.skills.map(sk => (
                     <span 
                       key={sk} 
-                      className="text-[9px] font-mono bg-[#0A0A0B] text-slate-400 px-1.5 py-0.5 rounded border border-white/5 leading-none"
+                      className="text-[9px] font-mono bg-[#0B0F19] text-slate-300 px-1.5 py-0.5 rounded border border-white/5 leading-none"
                     >
                       {sk}
                     </span>

@@ -82,10 +82,10 @@ export default function Projects() {
       </div>
 
       {/* Main Freelance Project Card */}
-      <div className="bg-[#141419] rounded-lg border border-white/5 shadow-2xl p-6 md:p-8 space-y-6">
+      <div className="bg-[#131B2A] rounded-lg border border-white/5 shadow-2xl p-6 md:p-8 space-y-6">
         <div>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
-            <span className="inline-block bg-brand-500/10 text-brand-500 font-mono text-xs px-2.5 py-1 rounded font-bold uppercase tracking-wider border border-brand-500/10">
+            <span className="inline-block bg-brand-500/10 text-brand-300 font-mono text-xs px-2.5 py-1 rounded font-bold uppercase tracking-wider border border-brand-500/15">
               End-to-End Solutions Delivery
             </span>
             <span className="text-xs text-slate-500 font-mono font-medium">Lagos, NG • August 2025</span>
@@ -93,7 +93,7 @@ export default function Projects() {
           <h4 className="font-display font-bold text-white text-xl md:text-2xl">
             Automated Data Analytics & AWS Cloud Migration Pipeline
           </h4>
-          <p className="text-xs md:text-sm text-slate-400 max-w-3xl mt-2 leading-relaxed">
+          <p className="text-xs md:text-sm text-slate-350 max-w-3xl mt-2 leading-relaxed">
             Successfully spearheaded the design and implementation of an end-to-end analytics workflow for a commercial merchant. 
             Replaced localized spreadsheets with a secure relational database (Microsoft SQL Server), established 
             AWS serverless querying, and unified visual reports in Looker Studio and AWS QuickSight.
@@ -105,7 +105,7 @@ export default function Projects() {
           {['Microsoft Excel', 'MS SQL Server', 'AWS S3', 'AWS Athena', 'AWS Glue', 'Looker Studio', 'QuickSight'].map((tech) => (
             <span 
               key={tech} 
-              className="px-3 py-1 bg-white/5 border border-white/5 rounded text-xs font-semibold text-slate-300 hover:bg-white/10 transition duration-150"
+              className="px-3 py-1 bg-[#0B0F19] border border-white/5 rounded text-xs font-semibold text-slate-300 hover:bg-[#1E293B] transition duration-150"
             >
               {tech}
             </span>
@@ -114,9 +114,9 @@ export default function Projects() {
 
         {/* Project Highlights Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="space-y-1.5 p-4 bg-[#0A0A0B]/50 rounded-lg border border-white/5">
-            <div className="flex items-center gap-1.5 text-brand-500 font-bold text-xs font-mono uppercase">
-              <span className="p-1 bg-white/5 rounded border border-white/5 text-brand-500"><FileSpreadsheet className="h-3.5 w-3.5" /></span>
+          <div className="space-y-1.5 p-4 bg-[#0B0F19] rounded-lg border border-white/5 shadow-inner">
+            <div className="flex items-center gap-1.5 text-brand-300 font-bold text-xs font-mono uppercase">
+              <span className="p-1 bg-[#131B2A] rounded border border-white/5 text-brand-300"><FileSpreadsheet className="h-3.5 w-3.5" /></span>
               Excel & SQL Foundation
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
@@ -124,9 +124,9 @@ export default function Projects() {
             </p>
           </div>
 
-          <div className="space-y-1.5 p-4 bg-[#0A0A0B]/50 rounded-lg border border-white/5">
-            <div className="flex items-center gap-1.5 text-brand-500 font-bold text-xs font-mono uppercase">
-              <span className="p-1 bg-white/5 rounded border border-white/5 text-brand-500"><Cloud className="h-3.5 w-3.5" /></span>
+          <div className="space-y-1.5 p-4 bg-[#0B0F19] rounded-lg border border-white/5 shadow-inner">
+            <div className="flex items-center gap-1.5 text-brand-300 font-bold text-xs font-mono uppercase">
+              <span className="p-1 bg-[#131B2A] rounded border border-white/5 text-brand-300"><Cloud className="h-3.5 w-3.5" /></span>
               Scalable Cloud Migration
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
@@ -134,9 +134,9 @@ export default function Projects() {
             </p>
           </div>
 
-          <div className="space-y-1.5 p-4 bg-[#0A0A0B]/50 rounded-lg border border-white/5">
-            <div className="flex items-center gap-1.5 text-brand-500 font-bold text-xs font-mono uppercase">
-              <span className="p-1 bg-white/5 rounded border border-white/5 text-brand-500"><BarChart className="h-3.5 w-3.5" /></span>
+          <div className="space-y-1.5 p-4 bg-[#0B0F19] rounded-lg border border-white/5 shadow-inner">
+            <div className="flex items-center gap-1.5 text-brand-300 font-bold text-xs font-mono uppercase">
+              <span className="p-1 bg-[#131B2A] rounded border border-white/5 text-brand-300"><BarChart className="h-3.5 w-3.5" /></span>
               BI Visual Dashboards
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
@@ -167,16 +167,16 @@ export default function Projects() {
                   onClick={() => setActiveStep(idx)}
                   className={`relative p-4 rounded flex flex-col items-center justify-center text-center transition-all duration-300 pointer-events-auto cursor-pointer focus:outline-none ${
                     isActive 
-                      ? 'bg-brand-500 text-slate-950 shadow-lg shadow-brand-500/25 scale-105 border border-brand-500' 
-                      : 'bg-white/5 text-slate-300 hover:bg-white/10 hover:scale-[1.02] border border-white/5'
+                      ? 'bg-brand-500 text-white shadow-lg scale-105 border border-brand-500 font-bold' 
+                      : 'bg-[#0B0F19] text-slate-300 hover:bg-[#1E293B] hover:scale-[1.02] border border-white/5'
                   }`}
                   id={`arch-step-${idx}`}
                 >
-                  <StepIcon className={`h-6 w-6 mb-2.5 ${isActive ? 'text-slate-950' : 'text-slate-400'}`} />
-                  <span className={`font-display font-medium text-[11px] leading-tight block truncate max-w-full ${isActive ? 'text-slate-950 font-semibold' : ''}`}>
+                  <StepIcon className={`h-6 w-6 mb-2.5 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                  <span className={`font-display font-medium text-[11px] leading-tight block truncate max-w-full ${isActive ? 'text-white font-semibold' : ''}`}>
                     {step.tool}
                   </span>
-                  <span className={`text-[9px] font-mono mt-1 uppercase font-bold ${isActive ? 'text-slate-900/80' : 'text-slate-500'}`}>
+                  <span className={`text-[9px] font-mono mt-1 uppercase font-bold ${isActive ? 'text-white/80' : 'text-slate-500'}`}>
                     {step.phase.split('.')[0]}
                   </span>
                 </button>
@@ -185,7 +185,7 @@ export default function Projects() {
           </div>
 
           {/* Active Step Details */}
-          <div className="mt-4 bg-[#0A0A0B]/60 border border-white/5 p-5 rounded-lg shadow-2xl">
+          <div className="mt-4 bg-[#0B0F19] border border-white/5 p-5 rounded-lg shadow-inner">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStep}
@@ -197,12 +197,12 @@ export default function Projects() {
               >
                 {/* Visual Circle Emblem */}
                 <div className="md:col-span-3 flex md:flex-col items-center justify-start md:justify-center p-3 text-center md:border-r border-white/5 gap-3 md:gap-2">
-                  <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center font-display font-medium text-lg border border-brand-500/20">
+                  <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-brand-500/10 text-brand-300 flex items-center justify-center font-display font-medium text-lg border border-brand-500/20">
                     {activeStep + 1}
                   </div>
                   <div>
                     <h6 className="font-semibold text-white text-xs md:text-sm">{METADATA_PIPELINE[activeStep].tool}</h6>
-                    <span className="text-[10px] text-slate-500 font-mono leading-none">{METADATA_PIPELINE[activeStep].phase}</span>
+                    <span className="text-[10px] text-slate-550 font-mono leading-none">{METADATA_PIPELINE[activeStep].phase}</span>
                   </div>
                 </div>
 
@@ -210,13 +210,13 @@ export default function Projects() {
                 <div className="md:col-span-9 space-y-3 font-sans">
                   <div>
                     <h6 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono">Workflow Outline</h6>
-                    <p className="text-slate-350 text-xs leading-relaxed mt-1">
+                    <p className="text-slate-300 text-xs leading-relaxed mt-1">
                       {METADATA_PIPELINE[activeStep].desc}
                     </p>
                   </div>
                   <div>
                     <h6 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono">Daniel's Core Task</h6>
-                    <p className="text-slate-305 text-xs leading-relaxed mt-1 flex items-start gap-1.5 text-slate-300">
+                    <p className="text-slate-300 text-xs leading-relaxed mt-1 flex items-start gap-1.5">
                       <span className="text-brand-500 font-bold shrink-0 mt-0.5"><CheckCircle className="h-3.5 w-3.5" /></span>
                       <span>{METADATA_PIPELINE[activeStep].implementation}</span>
                     </p>

@@ -226,9 +226,9 @@ export default function DashboardDemo() {
   }, [machineData]);
 
   return (
-    <div className="bg-[#0F0F12] rounded-xl border border-white/5 shadow-2xl overflow-hidden">
+    <div className="bg-[#1E293B] rounded-xl border border-white/5 shadow-2xl overflow-hidden">
       {/* Header bar / Tabs */}
-      <div className="bg-[#141419] px-6 py-5 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-white/5">
+      <div className="bg-[#0B0F19] px-6 py-5 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-white/5">
         <div>
           <div className="flex items-center gap-2">
             <span className="flex h-2.5 w-2.5 rounded-full bg-brand-500 animate-pulse" />
@@ -239,7 +239,7 @@ export default function DashboardDemo() {
           </p>
         </div>
 
-        <div className="flex bg-[#0A0A0B] p-1 rounded-md border border-white/5 w-full md:w-auto">
+        <div className="flex bg-[#0B0F19] p-1 rounded-md border border-white/5 w-full md:w-auto">
           <button
             onClick={() => setActiveTab('diagnostics')}
             className={`flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-1.5 rounded text-xs font-medium tracking-tight transition-all duration-200 cursor-pointer ${
@@ -278,7 +278,7 @@ export default function DashboardDemo() {
               className="space-y-6"
             >
               {/* Project Abstract */}
-              <div className="bg-[#141419] border border-white/5 p-4 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="bg-[#0B0F19] border border-white/5 p-4 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <span className="inline-block bg-white/5 font-mono text-[10px] text-brand-500 px-2 py-0.5 rounded tracking-wider font-semibold border border-white/5">
                     Client Case Study
@@ -350,7 +350,7 @@ export default function DashboardDemo() {
                   <select 
                     value={selectedMachineCategory}
                     onChange={(e) => setSelectedMachineCategory(e.target.value)}
-                    className="bg-[#141419] border border-white/5 rounded px-3 py-1.5 text-xs text-slate-200 outline-none focus:border-brand-500 cursor-pointer font-sans"
+                    className="bg-[#0B0F19] border border-white/5 rounded px-3 py-1.5 text-xs text-slate-200 outline-none focus:border-brand-500 cursor-pointer font-sans"
                   >
                     <option value="All">All Categories ({MACHINE_CATEGORIES.length})</option>
                     {MACHINE_CATEGORIES.map(category => (
@@ -363,7 +363,7 @@ export default function DashboardDemo() {
                   <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-[0.12em]">
                     Risk Classification
                   </label>
-                  <div className="flex gap-1 bg-[#0A0A0B] p-0.5 rounded border border-white/5">
+                  <div className="flex gap-1 bg-[#0B0F19] p-0.5 rounded border border-white/5">
                     {['All', 'High', 'Medium', 'Low'].map(lvl => (
                       <button
                         key={lvl}
@@ -384,7 +384,7 @@ export default function DashboardDemo() {
               {/* Live Render Area: Visual Anomaly Chart + Table */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 {/* Visual Chart Panel */}
-                <div className="lg:col-span-7 bg-[#141419] rounded-lg p-5 border border-white/5">
+                <div className="lg:col-span-7 bg-[#0B0F19] rounded-lg p-5 border border-white/5">
                   <div className="mb-4 flex justify-between items-center">
                     <h5 className="text-xs font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
                       <BarChart2 className="h-4 w-4 text-brand-500" />
@@ -414,7 +414,7 @@ export default function DashboardDemo() {
                       return (
                         <div key={idx} className="flex-1 flex flex-col items-center h-full group relative">
                            {/* Hover Tooltip card */}
-                          <div className="absolute bottom-full mb-2 bg-[#0A0A0B]/95 backdrop-blur-md text-white rounded px-2.5 py-1.5 text-[10px] hidden group-hover:block transition-all duration-150 z-30 pointer-events-none shadow-xl w-32 border border-white/10 font-sans">
+                        <div className="absolute bottom-full mb-2 bg-[#0B0F19]/95 backdrop-blur-md text-white rounded px-2.5 py-1.5 text-[10px] hidden group-hover:block transition-all duration-150 z-30 pointer-events-none shadow-xl w-32 border border-white/10 font-sans">
                             <p className="font-semibold text-[11px] truncate">{item.category}</p>
                             <div className="flex justify-between text-slate-400 mt-1 font-mono text-[9px]">
                               <span>Freq: {item.frequency}</span>
@@ -474,7 +474,7 @@ export default function DashboardDemo() {
                 </div>
 
                 {/* Table Breakdown Panel */}
-                <div className="lg:col-span-5 bg-[#141419] border border-white/5 rounded-lg overflow-hidden shadow-2xl">
+                <div className="lg:col-span-5 bg-[#0B0F19] border border-white/5 rounded-lg overflow-hidden shadow-2xl">
                   <div className="px-5 py-4 border-b border-white/5 flex flex-wrap gap-2 justify-between items-center bg-[#111116]/60">
                     <div className="space-y-0.5">
                       <h5 className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
@@ -487,22 +487,22 @@ export default function DashboardDemo() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={handleCopyDiagnosticsJSON}
-                        className="p-1.5 rounded bg-[#0A0A0B] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
+                        className="p-1.5 rounded bg-[#0B0F19] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
                         title="Copy as JSON"
                       >
                         {copiedDiagnostics ? <Check className="h-3 w-3 text-emerald-400" /> : <Copy className="h-3 w-3" />}
-                        <span className="absolute bottom-full mb-1 right-0 bg-[#0A0A0B] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
+                        <span className="absolute bottom-full mb-1 right-0 bg-[#0B0F19] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
                           {copiedDiagnostics ? 'Copied JSON!' : 'Copy raw JSON'}
                         </span>
                       </button>
                       
                       <button
                         onClick={handleExportDiagnosticsCSV}
-                        className="p-1.5 rounded bg-[#0A0A0B] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
+                        className="p-1.5 rounded bg-[#0B0F19] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
                         title="Download CSV"
                       >
                         <FileDown className="h-3 w-3" />
-                        <span className="absolute bottom-full mb-1 right-0 bg-[#0A0A0B] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
+                        <span className="absolute bottom-full mb-1 right-0 bg-[#0B0F19] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
                           Download CSV Report
                         </span>
                       </button>
@@ -516,7 +516,7 @@ export default function DashboardDemo() {
                   <div className="overflow-y-auto max-h-[300px]">
                     <table className="w-full text-left border-collapse text-xs">
                       <thead>
-                        <tr className="bg-[#0A0A0B] border-b border-white/5 text-slate-400 font-medium select-none text-[10px] uppercase">
+                        <tr className="bg-[#0B0F19] border-b border-white/5 text-slate-400 font-medium select-none text-[10px] uppercase">
                           <th className="py-2.5 px-4 font-bold tracking-wider">Time</th>
                           <th className="py-2.5 px-4 font-bold tracking-wider">Sensor Asset</th>
                           <th className="py-2.5 px-4 text-center font-bold tracking-wider">Value</th>
@@ -556,7 +556,7 @@ export default function DashboardDemo() {
               className="space-y-6"
             >
               {/* Project Abstract */}
-              <div className="bg-[#141419] border border-white/5 p-4 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="bg-[#0B0F19] border border-white/5 p-4 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <span className="inline-block bg-white/5 font-mono text-[10px] text-brand-500 px-2 py-0.5 rounded tracking-wider font-semibold border border-white/5">
                     Strategic AI Consulting
@@ -630,7 +630,7 @@ export default function DashboardDemo() {
                     <select 
                       value={selectedLocation}
                       onChange={(e) => setSelectedLocation(e.target.value)}
-                      className="bg-[#141419] border border-white/5 rounded px-3 py-1.5 text-xs text-slate-200 outline-none focus:border-brand-500 cursor-pointer font-sans"
+                      className="bg-[#0B0F19] border border-white/5 rounded px-3 py-1.5 text-xs text-slate-200 outline-none focus:border-brand-500 cursor-pointer font-sans"
                     >
                       <option value="All">All Factory Hubs</option>
                       <option value="Sydney Hub">Sydney Hub</option>
@@ -651,7 +651,7 @@ export default function DashboardDemo() {
                       max="95" 
                       value={equalityTargetMin} 
                       onChange={(e) => setEqualityTargetMin(Number(e.target.value))}
-                      className="w-48 h-2 bg-[#0A0A0B] rounded appearance-none cursor-pointer accent-brand-500 mt-2.5 block border border-white/5"
+                      className="w-48 h-2 bg-[#0B0F19] rounded appearance-none cursor-pointer accent-brand-500 mt-2.5 block border border-white/5"
                     />
                   </div>
                 </div>
@@ -660,7 +660,7 @@ export default function DashboardDemo() {
               {/* Render Area: Visual Comparison Matrix + Table */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 {/* Visual Equality Matrix Radar Bars */}
-                <div className="lg:col-span-6 bg-[#141419] rounded-lg p-5 border border-white/5">
+                <div className="lg:col-span-6 bg-[#0B0F19] rounded-lg p-5 border border-white/5">
                   <h5 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4 flex items-center gap-1.5">
                     <Layers className="h-4 w-4 text-slate-400" />
                     Wage Gap Comparison (Wider is worse)
@@ -674,7 +674,7 @@ export default function DashboardDemo() {
                           <span className="font-mono text-slate-400 text-[11px]">Wage Gap: <strong className="text-brand-500 font-bold">{row.avgWageGap}%</strong></span>
                         </div>
                         {/* Custom visual progress bar */}
-                        <div className="w-full bg-[#0A0A0B] h-2 rounded-full overflow-hidden border border-white/5">
+                        <div className="w-full bg-[#0B0F19] h-2 rounded-full overflow-hidden border border-white/5">
                           <motion.div 
                             initial={{ width: 0 }}
                             animate={{ width: `${row.avgWageGap * 6}%` }} 
@@ -700,7 +700,7 @@ export default function DashboardDemo() {
                 </div>
 
                 {/* Table Breakdown Panel */}
-                <div className="lg:col-span-6 bg-[#141419] border border-white/5 rounded-lg overflow-hidden shadow-2xl">
+                <div className="lg:col-span-6 bg-[#0B0F19] border border-white/5 rounded-lg overflow-hidden shadow-2xl">
                   <div className="px-5 py-4 border-b border-white/5 flex flex-wrap gap-2 justify-between items-center bg-[#111116]/60">
                     <div className="space-y-0.5">
                       <h5 className="text-xs font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
@@ -714,22 +714,22 @@ export default function DashboardDemo() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={handleCopyEqualityJSON}
-                        className="p-1.5 rounded bg-[#0A0A0B] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
+                        className="p-1.5 rounded bg-[#0B0F19] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
                         title="Copy as JSON"
                       >
                         {copiedEquality ? <Check className="h-3 w-3 text-emerald-400" /> : <Copy className="h-3 w-3" />}
-                        <span className="absolute bottom-full mb-1 right-0 bg-[#0A0A0B] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
+                        <span className="absolute bottom-full mb-1 right-0 bg-[#0B0F19] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
                           {copiedEquality ? 'Copied JSON!' : 'Copy raw JSON'}
                         </span>
                       </button>
                       
                       <button
                         onClick={handleExportEqualityCSV}
-                        className="p-1.5 rounded bg-[#0A0A0B] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
+                        className="p-1.5 rounded bg-[#0B0F19] hover:bg-white/5 border border-white/5 text-slate-400 hover:text-white transition duration-150 relative group cursor-pointer"
                         title="Download CSV"
                       >
                         <FileDown className="h-3 w-3" />
-                        <span className="absolute bottom-full mb-1 right-0 bg-[#0A0A0B] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
+                        <span className="absolute bottom-full mb-1 right-0 bg-[#0B0F19] text-[8px] text-slate-300 px-1 py-0.5 rounded hidden group-hover:block whitespace-nowrap border border-white/10">
                           Download CSV Report
                         </span>
                       </button>
@@ -743,7 +743,7 @@ export default function DashboardDemo() {
                   <div className="overflow-y-auto max-h-[300px]">
                     <table className="w-full text-left border-collapse text-xs">
                       <thead>
-                        <tr className="bg-[#0A0A0B] border-b border-white/5 text-slate-400 select-none text-[10px] font-bold uppercase">
+                        <tr className="bg-[#0B0F19] border-b border-white/5 text-slate-400 select-none text-[10px] font-bold uppercase">
                           <th className="py-2.5 px-4">Division Hub</th>
                           <th className="py-2.5 px-4">Leaders</th>
                           <th className="py-2.5 px-4 text-right">Computed</th>

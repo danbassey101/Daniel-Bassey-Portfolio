@@ -155,8 +155,8 @@ export default function Skills() {
             }}
             className={`px-4 py-2 rounded text-xs font-semibold tracking-tight transition cursor-pointer border ${
               filterCategory === tab.id
-                ? 'bg-brand-500 text-slate-950 font-bold border-brand-500 shadow-sm'
-                : 'bg-white/5 text-slate-400 border-white/5 hover:text-white hover:bg-white/10'
+                ? 'bg-brand-500 text-white font-bold border-brand-500 shadow-md'
+                : 'bg-[#1E293B] text-slate-300 border-white/5 hover:text-white hover:bg-[#1E293B]/80'
             }`}
           >
             {tab.label}
@@ -178,20 +178,20 @@ export default function Skills() {
                 onClick={() => setActiveSkillIndex(listIdx)}
                 className={`p-4 rounded border cursor-pointer select-none transition-all duration-200 flex items-center justify-between gap-4 ${
                   isSelected 
-                    ? 'bg-[#1a1a23] border-brand-500/30 text-white shadow-xl' 
-                    : 'bg-[#141419] border-white/5 hover:border-white/10 text-slate-300 hover:text-white'
+                    ? 'bg-[#1E293B] border-brand-500/60 text-white shadow-lg' 
+                    : 'bg-[#131B2A] border-white/5 hover:border-brand-500/20 text-slate-300 hover:text-white hover:bg-[#1C2638] shadow-sm'
                 }`}
                 id={`skill-row-${listIdx}`}
               >
                 <div className="flex items-center gap-3 truncate">
-                  <span className={`p-2 rounded ${isSelected ? 'bg-brand-500/10 text-brand-500' : 'bg-white/5 text-slate-400 border border-white/5'}`}>
+                  <span className={`p-2 rounded ${isSelected ? 'bg-brand-500/10 text-brand-300' : 'bg-[#0B0F19] text-slate-400 border border-white/5'}`}>
                     <SkillIcon className="h-4 w-4" />
                   </span>
                   <div className="truncate">
                     <h5 className="font-semibold text-xs md:text-sm tracking-tight truncate leading-snug">
                        {skill.name}
                     </h5>
-                    <span className={`text-[9.5px] uppercase font-bold font-mono tracking-wider ${isSelected ? 'text-brand-400' : 'text-slate-500'}`}>
+                    <span className={`text-[9.5px] uppercase font-bold font-mono tracking-wider ${isSelected ? 'text-brand-300' : 'text-slate-500'}`}>
                       {skill.category === 'programming' ? 'Lang & Query' : skill.category === 'bi_vis' ? 'BI Reporting' : 'Cloud Architecture'}
                     </span>
                   </div>
@@ -199,10 +199,10 @@ export default function Skills() {
 
                 <div className="flex items-center gap-3 shrink-0">
                   <div className="flex flex-col items-end w-20">
-                    <span className="text-xs font-mono font-bold">{skill.level}%</span>
-                    <div className="w-16 bg-white/5 rounded-full h-1 mt-1 overflow-hidden border border-white/5">
+                    <span className="text-xs font-mono font-bold text-slate-300">{skill.level}%</span>
+                    <div className="w-16 bg-[#0B0F19] rounded-full h-1 mt-1 overflow-hidden border border-white/5">
                       <div 
-                        className={`h-full rounded-full ${isSelected ? 'bg-brand-500' : 'bg-slate-600'}`} 
+                        className={`h-full rounded-full ${isSelected ? 'bg-brand-500' : 'bg-slate-700'}`} 
                         style={{ width: `${skill.level}%` }}
                       />
                     </div>
@@ -223,23 +223,23 @@ export default function Skills() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.15 }}
-                className="bg-[#141419] border border-white/5 rounded-lg p-5 shadow-2xl space-y-4"
+                className="bg-[#1E293B] border border-white/5 rounded-lg p-5 shadow-2xl space-y-4"
               >
                 <div className="flex justify-between items-start gap-4">
                   <div>
                     <h4 className="font-display font-bold text-white text-base md:text-lg tracking-tight leading-tight">
                       {filteredSkills[activeSkillIndex].name}
                     </h4>
-                    <span className="text-[9px] bg-[#0A0A0B] text-brand-500 px-2.5 py-1 rounded font-mono font-bold inline-block mt-2 border border-white/5 uppercase tracking-wide">
+                    <span className="text-[9px] bg-[#0B0F19] text-brand-300 px-2.5 py-1 rounded font-mono font-bold inline-block mt-2 border border-white/5 uppercase tracking-wide">
                       Level: {filteredSkills[activeSkillIndex].level}% Match
                     </span>
                   </div>
-                  <span className="p-2 bg-white/5 text-brand-500 rounded border border-white/5">
+                  <span className="p-2 bg-[#0B0F19] text-brand-400 rounded border border-white/5">
                     {React.createElement(getIcon(filteredSkills[activeSkillIndex].iconName), { className: 'h-5 w-5' })}
                   </span>
                 </div>
 
-                <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
                   {filteredSkills[activeSkillIndex].description}
                 </p>
 
@@ -252,7 +252,7 @@ export default function Skills() {
                     {filteredSkills[activeSkillIndex].subTools?.map((sub) => (
                       <span
                         key={sub}
-                        className="px-2.5 py-1 bg-[#0A0A0B] border border-white/5 hover:bg-white/5 text-slate-300 text-[10.5px] font-semibold rounded flex items-center gap-1.5 transition duration-150"
+                        className="px-2.5 py-1 bg-[#0B0F19] border border-white/5 hover:bg-[#0B0F19]/50 text-slate-300 text-[10.5px] font-semibold rounded flex items-center gap-1.5 transition duration-150"
                       >
                         <CheckCircle2 className="h-3 w-3 text-brand-500 shrink-0" />
                         {sub}
@@ -262,7 +262,7 @@ export default function Skills() {
                 </div>
               </motion.div>
             ) : (
-              <div className="bg-[#141419]/85 border border-white/5 rounded-lg p-8 text-center text-slate-500 text-xs">
+              <div className="bg-[#1E293B] border border-white/5 rounded-lg p-8 text-center text-slate-500 text-xs shadow-2xl">
                 <p>Click any skill from the list to look up detailed toolkit execution details.</p>
               </div>
             )}
