@@ -151,40 +151,40 @@ BACHELOR OF TECHNOLOGY IN STATISTICS – Federal University of Technology Minna 
         {/* Paper Container Body (Scrollable container on web) */}
         <div className="flex-1 overflow-y-auto p-4 md:p-8 bg-[#0B0F19] flex justify-center">
           
-          {/* Mock Document Page Card (Exact visual translation) */}
+          {/* Mock Document Page Card / Sheet (Now beautifully unified in Dark Slate with full Print Support) */}
           <div 
             ref={printableRef}
             id="printable-resume-node"
-            className="w-full max-w-[800px] bg-white text-slate-800 p-6 md:p-10 shadow-2xl rounded-lg border border-slate-200 text-left relative font-sans print:shadow-none print:border-none print:p-0 print:bg-white print:text-black"
+            className="w-full max-w-[800px] bg-[#131B2A] text-slate-300 p-6 md:p-10 shadow-2xl rounded-lg border border-white/5 text-left relative font-sans print:shadow-none print:border-none print:p-0 print:bg-white print:text-black"
           >
             {/* Top Identity Header Block */}
-            <div className="flex flex-col md:flex-row justify-between items-start border-b-2 border-slate-800 pb-5 gap-4">
+            <div className="flex flex-col md:flex-row justify-between items-start border-b-2 border-slate-700 print:border-slate-800 pb-5 gap-4">
               <div className="space-y-1">
-                <h1 className="text-2xl sm:text-3.5xl font-extrabold text-slate-900 tracking-tight leading-none uppercase">
+                <h1 className="text-2xl sm:text-3.5xl font-extrabold text-white print:text-slate-900 tracking-tight leading-none uppercase">
                   Daniel Bassey
                 </h1>
-                <p className="text-xs sm:text-sm font-semibold text-slate-600 tracking-wide font-mono uppercase flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-slate-400 shrink-0" />
+                <p className="text-xs sm:text-sm font-semibold text-slate-400 print:text-slate-600 tracking-wide font-mono uppercase flex items-center gap-1.5">
+                  <span className="h-2 w-2 rounded-full bg-brand-500 paint:bg-slate-400 shrink-0" />
                   Data Analyst • Cloud Data Analyst • Business Analyst
                 </p>
               </div>
 
               {/* Personal Coordinates */}
-              <div className="text-[11px] md:text-xs text-slate-500 space-y-1 font-mono leading-relaxed md:text-right flex flex-col md:items-end w-full md:w-auto shrink-0 border-t md:border-t-0 border-slate-100 pt-3 md:pt-0">
+              <div className="text-[11px] md:text-xs text-slate-400 print:text-slate-500 space-y-1 font-mono leading-relaxed md:text-right flex flex-col md:items-end w-full md:w-auto shrink-0 border-t md:border-t-0 border-white/5 print:border-slate-100 pt-3 md:pt-0">
                 <div className="flex items-center gap-1.5 md:justify-end">
-                  <Phone className="h-3 w-3 text-slate-400" />
+                  <Phone className="h-3 w-3 text-brand-300/80 print:text-slate-400" />
                   <span>+234 816 887 4976</span>
                 </div>
                 <div className="flex items-center gap-1.5 md:justify-end">
-                  <Mail className="h-3 w-3 text-slate-400" />
-                  <a href="mailto:danbassey101@gmail.com" className="hover:underline">danbassey101@gmail.com</a>
+                  <Mail className="h-3 w-3 text-brand-300/80 print:text-slate-400" />
+                  <a href="mailto:danbassey101@gmail.com" className="hover:underline hover:text-brand-300 print:text-slate-800">danbassey101@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-1.5 md:justify-end">
-                  <Linkedin className="h-3 w-3 text-slate-400" />
-                  <a href="https://www.linkedin.com/in/danielbassey8/" target="_blank" referrerPolicy="no-referrer" className="hover:underline">linkedin.com/in/danielbassey8/</a>
+                  <Linkedin className="h-3 w-3 text-brand-300/80 print:text-slate-400" />
+                  <a href="https://www.linkedin.com/in/danielbassey8/" target="_blank" referrerPolicy="no-referrer" className="hover:underline hover:text-brand-300 print:text-slate-800">linkedin.com/in/danielbassey8/</a>
                 </div>
                 <div className="flex items-center gap-1.5 md:justify-end">
-                  <MapPin className="h-3 w-3 text-slate-400" />
+                  <MapPin className="h-3 w-3 text-brand-300/80 print:text-slate-400" />
                   <span>Agodo-Egbe, Lagos, Nigeria</span>
                 </div>
               </div>
@@ -192,24 +192,24 @@ BACHELOR OF TECHNOLOGY IN STATISTICS – Federal University of Technology Minna 
 
             {/* SKILLS SECTION */}
             <div className="mt-6 space-y-2">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-white print:text-slate-900 border-b border-white/10 print:border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
                 Skills Profile
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-y-2 gap-x-4 pt-1 font-sans text-xs sm:text-sm">
-                <div className="md:col-span-4 font-bold text-slate-700">Programming Languages:</div>
-                <div className="md:col-span-8 text-slate-600">SQL, Python (Pandas, NumPy, Seaborn, MatPlotLib), R programming</div>
+                <div className="md:col-span-4 font-bold text-slate-300 print:text-slate-700">Programming Languages:</div>
+                <div className="md:col-span-8 text-slate-400 print:text-slate-600">SQL, Python (Pandas, NumPy, Seaborn, MatPlotLib), R programming</div>
 
-                <div className="md:col-span-4 font-bold text-slate-700">BI & Visualization:</div>
-                <div className="md:col-span-8 text-slate-600">Power BI, Google Data Studio, Tableau, MS Excel, Canva</div>
+                <div className="md:col-span-4 font-bold text-slate-300 print:text-slate-700">BI & Visualization:</div>
+                <div className="md:col-span-8 text-slate-400 print:text-slate-600">Power BI, Google Data Studio, Tableau, MS Excel, Canva</div>
 
-                <div className="md:col-span-4 font-bold text-slate-700">Cloud Platforms:</div>
-                <div className="md:col-span-8 text-slate-600">AWS (S3, Athena, Glue, QuickSight), GCP (BigQuery, Storage)</div>
+                <div className="md:col-span-4 font-bold text-slate-300 print:text-slate-700">Cloud Platforms:</div>
+                <div className="md:col-span-8 text-slate-400 print:text-slate-600">AWS (S3, Athena, Glue, QuickSight), GCP (BigQuery, Storage)</div>
               </div>
             </div>
 
             {/* WORK EXPERIENCE */}
             <div className="mt-6 space-y-4">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-white print:text-slate-900 border-b border-white/10 print:border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
                 Work Experience
               </h2>
 
@@ -217,14 +217,14 @@ BACHELOR OF TECHNOLOGY IN STATISTICS – Federal University of Technology Minna 
                 {/* ROLE 1 */}
                 <div className="space-y-1">
                   <div className="flex justify-between items-start gap-2 flex-wrap sm:flex-nowrap">
-                    <h3 className="font-extrabold text-slate-800 text-xs sm:text-base">
-                      LEAD BUSINESS ANALYST <span className="font-medium text-slate-500">— Incrosoft</span>
+                    <h3 className="font-extrabold text-slate-100 print:text-slate-800 text-xs sm:text-base">
+                      LEAD BUSINESS ANALYST <span className="font-medium text-brand-300 print:text-slate-500">— Incrosoft</span>
                     </h3>
-                    <span className="text-[11px] font-bold font-mono text-slate-500 shrink-0 uppercase sm:text-right">
+                    <span className="text-[11px] font-bold font-mono text-slate-400 print:text-slate-500 shrink-0 uppercase sm:text-right">
                       Jan 2026 – Present | Bangladesh
                     </span>
                   </div>
-                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-300 print:text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
                     <li>Leading the development of a Software Requirements Specification (SRS) to guide the company in creating a new concept.</li>
                     <li>Designing a financial revenue model to project potential revenue outcomes and ROI parameters for the new system.</li>
                     <li>Establishing a sustainable business model with a robust anti-failure process to ensure resilient, long-term operational success.</li>
@@ -234,14 +234,14 @@ BACHELOR OF TECHNOLOGY IN STATISTICS – Federal University of Technology Minna 
                 {/* ROLE 2 */}
                 <div className="space-y-1">
                   <div className="flex justify-between items-start gap-2 flex-wrap sm:flex-nowrap">
-                    <h3 className="font-extrabold text-slate-800 text-xs sm:text-base">
-                      DATA ANALYST <span className="font-medium text-slate-500">— Deloitte</span>
+                    <h3 className="font-extrabold text-slate-100 print:text-slate-800 text-xs sm:text-base">
+                      DATA ANALYST <span className="font-medium text-brand-300 print:text-slate-500">— Deloitte</span>
                     </h3>
-                    <span className="text-[11px] font-bold font-mono text-slate-500 shrink-0 uppercase sm:text-right">
+                    <span className="text-[11px] font-bold font-mono text-slate-400 print:text-slate-500 shrink-0 uppercase sm:text-right">
                       Nov 2025 – Dec 2025 | Australia
                     </span>
                   </div>
-                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-300 print:text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
                     <li>Processed a large raw JSON dataset containing 9 machine categories reporting every 10 minutes, applying statistical alignment, data unification and diagnostic analysis to uncover pattern breakdowns.</li>
                     <li>Enhanced HR analytics by writing a custom categorization classification concept to enable clearer, diagnostic interpretations of Equality Scores across factories and organizational job roles.</li>
                   </ul>
@@ -250,14 +250,14 @@ BACHELOR OF TECHNOLOGY IN STATISTICS – Federal University of Technology Minna 
                 {/* ROLE 3 */}
                 <div className="space-y-1">
                   <div className="flex justify-between items-start gap-2 flex-wrap sm:flex-nowrap">
-                    <h3 className="font-extrabold text-slate-800 text-xs sm:text-base">
-                      RESEARCH ANALYST <span className="font-medium text-slate-500">— Chitt Organization</span>
+                    <h3 className="font-extrabold text-slate-100 print:text-slate-800 text-xs sm:text-base">
+                      RESEARCH ANALYST <span className="font-medium text-brand-300 print:text-slate-500">— Chitt Organization</span>
                     </h3>
-                    <span className="text-[11px] font-bold font-mono text-slate-500 shrink-0 uppercase sm:text-right">
+                    <span className="text-[11px] font-bold font-mono text-slate-400 print:text-slate-500 shrink-0 uppercase sm:text-right">
                       Jan 2025 – Oct 2025 | India
                     </span>
                   </div>
-                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-300 print:text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
                     <li>Analyzed critical trends and high-volume structured research datasets to inform corporate strategic initiatives, driving a 20% improvement in operational flow and a 15% increase in project success rates.</li>
                     <li>Collaborated cross-functionally with team members to design and implement impactful community programs, achieving a 25% boost in stakeholder engagement and a 30% increase in programmatic effectiveness.</li>
                     <li>Guaranteed extreme research metrics accuracy and technical validation aligning perfectly with target objectives, hitting a 99% alignment rate to strategic priorities.</li>
@@ -268,20 +268,20 @@ BACHELOR OF TECHNOLOGY IN STATISTICS – Federal University of Technology Minna 
 
             {/* PROJECTS SECTION */}
             <div className="mt-6 space-y-3">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-white print:text-slate-900 border-b border-white/10 print:border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
                 Featured Projects
               </h2>
 
               <div className="space-y-1.5">
                 <div className="flex justify-between items-start gap-2 flex-wrap sm:flex-nowrap">
-                  <h3 className="font-extrabold text-slate-800 text-xs sm:text-sm">
-                    DATA ANALYSIS <span className="font-medium text-slate-500">— Freelance End-to-End Pipeline</span>
+                  <h3 className="font-extrabold text-slate-100 print:text-slate-800 text-xs sm:text-sm">
+                    DATA ANALYSIS <span className="font-medium text-brand-300 print:text-slate-500">— Freelance End-to-End Pipeline</span>
                   </h3>
-                  <span className="text-[11px] font-bold font-mono text-slate-500 shrink-0 uppercase">
+                  <span className="text-[11px] font-bold font-mono text-slate-400 print:text-slate-500 shrink-0 uppercase">
                     August 2025 | Lagos, NG
                   </span>
                 </div>
-                <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-600 text-xs sm:text-sm mt-1.5 leading-relaxed">
+                <ul className="list-disc list-outside pl-4 space-y-1.5 text-slate-300 print:text-slate-600 text-xs sm:text-sm mt-1.5 leading-relaxed">
                   <li>Formulated extraction models and cleaned multi-source tabular datasets using Microsoft Excel to guarantee data normalization.</li>
                   <li>Designed and built a relational Microsoft SQL Server database schema, coding optimized queries, subqueries, and views, and integrated Looker Studio dashboards to communicate metric KPIs to commercial stakeholders.</li>
                   <li>Migrated analytical loads to serverless AWS infrastructure (Amazon S3 bucket lakes, AWS Glue Crawlers, Athena querying engine, and QuickSight visuals) to scale cloud workloads.</li>
@@ -291,20 +291,20 @@ BACHELOR OF TECHNOLOGY IN STATISTICS – Federal University of Technology Minna 
 
             {/* EDUCATION SECTION */}
             <div className="mt-6 space-y-2">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-white print:text-slate-900 border-b border-white/10 print:border-slate-300 pb-1 flex items-center gap-1.5 font-sans">
                 Education History
               </h2>
 
               <div className="flex justify-between items-start gap-3 flex-wrap sm:flex-nowrap pt-1">
                 <div>
-                  <h4 className="font-extrabold text-slate-800 text-xs sm:text-sm">
+                  <h4 className="font-extrabold text-slate-100 print:text-slate-800 text-xs sm:text-sm">
                     BACHELOR OF TECHNOLOGY IN STATISTICS
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium">
+                  <p className="text-xs sm:text-sm text-slate-300 print:text-slate-600 font-medium">
                     Federal University of Technology Minna
                   </p>
                 </div>
-                <span className="text-[11px] font-bold font-mono text-slate-500 shrink-0 uppercase sm:text-right">
+                <span className="text-[11px] font-bold font-mono text-slate-400 print:text-slate-500 shrink-0 uppercase sm:text-right">
                   Niger State, NG
                 </span>
               </div>
