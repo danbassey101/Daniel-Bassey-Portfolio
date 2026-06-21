@@ -51,3 +51,115 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #706FD3; /* Tech Violet accent */
 }
+
+/* HIGH-FIDELITY PRINT STYLES FOR RESUME GENERATION */
+@media print {
+  /* Hide entire website screen infrastructure */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  div, header, footer, section, button, a:not(#printable-resume-node a) {
+    display: none !important; 
+  }
+
+  /* Restore only the printable paper element container */
+  #printable-resume-node, 
+  #printable-resume-node * {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  #printable-resume-node {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Support generic flex grid layouts for printed paper */
+  #printable-resume-node .flex {
+    display: flex !important;
+  }
+  #printable-resume-node .grid {
+    display: grid !important;
+  }
+  #printable-resume-node .grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+  #printable-resume-node .md\:col-span-4 {
+    grid-column: span 4 / span 4 !important;
+  }
+  #printable-resume-node .md\:col-span-8 {
+    grid-column: span 8 / span 8 !important;
+  }
+  #printable-resume-node .text-right {
+    text-align: right !important;
+  }
+  #printable-resume-node .md\:items-end {
+    align-items: flex-end !important;
+  }
+
+  #printable-resume-node ul {
+    list-style-type: disc !important;
+    padding-left: 1.25rem !important;
+    display: block !important;
+  }
+
+  #printable-resume-node li {
+    display: list-item !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  #printable-resume-node a {
+    text-decoration: underline !important;
+    color: #1a202c !important;
+  }
+
+  #printable-resume-node h1 {
+    font-size: 26pt !important;
+    color: #0f172a !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  #printable-resume-node h2 {
+    font-size: 11pt !important;
+    color: #0f172a !important;
+    border-bottom: 1.5px solid #64748b !important;
+    padding-bottom: 2px !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  #printable-resume-node h3 {
+    font-size: 10.5pt !important;
+    color: #1e293b !important;
+  }
+
+  #printable-resume-node .text-slate-600 {
+    color: #475569 !important;
+  }
+
+  #printable-resume-node .text-slate-500 {
+    color: #64748b !important;
+  }
+
+  #printable-resume-node .text-slate-700 {
+    color: #334155 !important;
+  }
+
+  @page {
+    size: letter;
+    margin: 1.2cm 1.5cm 1.2cm 1.5cm;
+  }
+}
+

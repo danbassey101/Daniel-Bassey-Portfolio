@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, Linkedin, MapPin, Menu, X, FileText, BarChart2 } from 'lucide-react';
 
-export default function Header() {
+export default function Header({ onViewResume }: { onViewResume: () => void }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -59,7 +59,14 @@ export default function Header() {
         </nav>
 
         {/* Action Menu (Download CV button or Contact directly) */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3">
+          <button
+            onClick={onViewResume}
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-[#1E293B] border border-white/5 hover:border-brand-500/25 hover:text-brand-300 text-slate-200 text-xs font-semibold hover:bg-[#1E293B]/80 transition duration-300 cursor-pointer shadow-sm"
+          >
+            <FileText className="h-3.5 w-3.5" />
+            View Resume
+          </button>
           <a
             href="mailto:danbassey101@gmail.com"
             className="flex items-center gap-1.5 px-4 py-2 rounded-md bg-brand-500 text-white font-semibold text-xs hover:bg-brand-600 transition-all duration-300 shadow-sm"
@@ -98,8 +105,18 @@ export default function Header() {
           </div>
 
           <div className="flex flex-col gap-2 pt-2">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onViewResume();
+              }}
+              className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1E293B] hover:bg-[#1E293B]/80 text-slate-200 border border-white/5 font-semibold text-xs rounded-lg shadow transition cursor-pointer"
+            >
+              <FileText className="h-4 w-4 text-brand-400" />
+              View Official Resume
+            </button>
             <a
-               href="mailto:danbassey101@gmail.com"
+              href="mailto:danbassey101@gmail.com"
               className="flex items-center justify-center gap-2 px-4 py-2.5 bg-brand-500 text-white font-semibold text-xs rounded-lg shadow hover:bg-brand-600 transition"
             >
               <Mail className="h-4 w-4" />

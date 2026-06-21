@@ -21,7 +21,8 @@ import {
   BarChart2,
   Calendar,
   Layers,
-  ArrowDown
+  ArrowDown,
+  FileText
 } from 'lucide-react';
 
 import Header from './components/Header';
@@ -30,14 +31,16 @@ import Skills from './components/Skills';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import ResumeViewer from './components/ResumeViewer';
 
 export default function App() {
   const [activeHeroTab, setActiveHeroTab] = useState<'outcomes' | 'linkedin'>('outcomes');
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
     <div className="bg-[#0B0F19] min-h-screen text-[#E2E8F0] selection:bg-brand-500 selection:text-white">
       {/* Dynamic Navigation Banner */}
-      <Header />
+      <Header onViewResume={() => setIsResumeOpen(true)} />
 
       {/* Hero Showcase Frame */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#0D1220] border-b border-brand-500/10">
@@ -129,10 +132,17 @@ export default function App() {
               >
                 <a
                   href="#sandbox"
-                  className="px-5 py-3 rounded bg-brand-500 border border-brand-500 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-600 transition active:scale-[0.98] cursor-pointer shadow-lg shadow-brand-500/25"
+                  className="px-5 py-3 rounded bg-brand-500 border border-brand-500 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-600 transition active:scale-[0.98] cursor-pointer shadow-lg shadow-brand-500/25 animate-pulse"
                 >
                   Explore Interactive Sandbox
                 </a>
+                <button
+                  onClick={() => setIsResumeOpen(true)}
+                  className="px-5 py-3 rounded bg-[#1E293B] border border-white/5 hover:border-brand-500/25 text-slate-200 hover:text-brand-300 font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition active:scale-[0.98] cursor-pointer shadow-md flex items-center justify-center gap-1.5"
+                >
+                  <FileText className="h-4 w-4 text-brand-400" />
+                  View Resume / CV
+                </button>
                 <a
                   href="#contact"
                   className="px-5 py-3 rounded bg-transparent border border-white/15 text-[#E2E8F0] font-bold text-xs uppercase tracking-wider hover:bg-white/5 transition active:scale-[0.98] cursor-pointer shadow-sm"
@@ -380,6 +390,15 @@ export default function App() {
               and statistical inference testing. This statistical discipline provides the raw theoretical rigor behind Daniel’s clean telemetry 
               parsing, predictive classifications, and deep business data intelligence models.
             </p>
+            <div className="pt-2">
+              <button
+                onClick={() => setIsResumeOpen(true)}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#080B12] hover:bg-brand-500/10 border border-white/10 hover:border-brand-500/25 text-slate-200 hover:text-brand-300 rounded text-xs font-bold transition cursor-pointer"
+              >
+                <FileText className="h-4 w-4 text-brand-400" />
+                Open Portfolio Resume Hub
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -415,6 +434,9 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      {/* Interactive Floating A4 Resume Overlay hub */}
+      <ResumeViewer isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
     </div>
   );
 }

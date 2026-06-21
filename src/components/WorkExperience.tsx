@@ -42,22 +42,6 @@ const EXPERIENCES: WorkExpType[] = [
     ]
   },
   {
-    role: 'Financial Analyst',
-    company: 'Orion Marine LTD',
-    location: 'Lagos, Nigeria ',
-    period: 'June 2025 – November 2025',
-    bullets: [
-      'Maintained and audited database records, ensuring 100% accuracy and compliance while streamlining the documentation of journal vouchers.',
-      'Analyzed withholding taxes, directly contributing to organizational financial transparency and compliance with tax regulations.',
-      'Implemented a meticulous filing system for journal vouchers, vastly enhancing document retrieval efficiency and daily workflow.'
-    ],
-    metrics: [
-      { label: 'Data Accuracy & Compliance', value: '100%', description: 'Achieved total accuracy and strict regulatory compliance during the continuous management and entry of financial records into the central database.' },
-      { label: 'Tax Analysis Coverage', value: '100%', description: 'Conducted thorough, comprehensive analysis of all corporate withholding taxes, significantly increasing financial transparency across the organization.' },
-      { label: 'Document Retrieval Efficiency', value: '+35%', description: 'Streamlined the development, organization, and meticulous filing of journal vouchers to accelerate document retrieval speeds for the finance team.' }
-    ]
-  },
-  {
     role: 'Research Analyst',
     company: 'Chitt Organization',
     location: 'Uttar Pradesh, India',
@@ -103,7 +87,7 @@ const CERTIFICATIONS: Certification[] = [
     skills: ['Google Cloud', 'Generative AI', 'AI/ML Concept']
   },
   {
-    title: 'Scrum:Basics',
+    title: 'Scrum: Basics',
     issuer: 'LinkedIn Learning',
     date: 'Certified: 2025',
     skills: ['Scrum', 'Agile', 'Project Management']
@@ -125,6 +109,12 @@ const CERTIFICATIONS: Certification[] = [
     issuer: 'Pragmatic Works',
     date: 'Certified: 2024',
     skills: ['Dax Measures', 'Data Modeling', 'Advance ETL and Power Query']
+  },
+  {
+    title: 'Introduction to Data Warehouses',
+    issuer: 'LinkedIn Learning',
+    date: 'Certified: 2025',
+    skills: ['Dimensional Modelling', 'Schema Design', 'Data Lake & Data Mart']
   }
 ];
 
